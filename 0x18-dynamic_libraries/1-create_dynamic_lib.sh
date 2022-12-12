@@ -1,3 +1,4 @@
 #!/bin/bash
-gcc *.c -fpic
-gcc *.o -shared -o liball.so
+gcc -c *.c
+ar -rcs liball.a *.o
+ranlib liball.a
